@@ -1,7 +1,7 @@
 package pokemons;
 
-import ablities.Confide;
-import ablities.Swagger;
+import abilities.Confide;
+import abilities.Swagger;
 import ru.ifmo.se.pokemon.Pokemon;
 import ru.ifmo.se.pokemon.Type;
 

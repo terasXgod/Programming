@@ -1,9 +1,9 @@
 package pokemons;
 
-import ablities.BellyDrum;
-import ablities.Slash;
-import ablities.Swagger;
-import ablities.WorkUp;
+import abilities.BellyDrum;
+import abilities.Slash;
+import abilities.Swagger;
+import abilities.WorkUp;
 import ru.ifmo.se.pokemon.Pokemon;
 import ru.ifmo.se.pokemon.Type;
 

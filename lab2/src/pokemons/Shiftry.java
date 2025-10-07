@@ -1,9 +1,9 @@
 package pokemons;
 
-import ablities.Confide;
-import ablities.Growth;
-import ablities.LowSweep;
-import ablities.Swagger;
+import abilities.Confide;
+import abilities.Growth;
+import abilities.LowSweep;
+import abilities.Swagger;
 import ru.ifmo.se.pokemon.Pokemon;
 import ru.ifmo.se.pokemon.Type;
 

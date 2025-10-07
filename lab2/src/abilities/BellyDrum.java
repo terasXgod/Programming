@@ -1,4 +1,4 @@
-package ablities;
+package abilities;
 
 import ru.ifmo.se.pokemon.Pokemon;
 import ru.ifmo.se.pokemon.Stat;

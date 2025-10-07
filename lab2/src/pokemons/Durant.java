@@ -1,9 +1,9 @@
 package pokemons;
 
-import ablities.Bite;
-import ablities.IronDefence;
-import ablities.MetalSound;
-import ablities.SandAttack;
+import abilities.Bite;
+import abilities.IronDefence;
+import abilities.MetalSound;
+import abilities.SandAttack;
 import ru.ifmo.se.pokemon.Pokemon;
 import ru.ifmo.se.pokemon.Type;
 
