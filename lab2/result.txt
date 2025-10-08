@@ -1,0 +1,125 @@
+Durant Yatoro из команды синих вступает в бой!
+Seedot Larl из команды желтых вступает в бой!
+Durant Yatoro Использует Sand Attack. 
+Seedot Larl уменьшает точность.
+
+Seedot Larl промахивается
+
+Seedot Larl борется с соперником. 
+Durant Yatoro теряет 3 здоровья.
+Seedot Larl теряет 1 здоровья.
+
+Durant Yatoro промахивается
+
+Seedot Larl борется с соперником. 
+Seedot Larl теряет 3 здоровья.
+Seedot Larl теряет 1 здоровья.
+
+Seedot Larl борется с соперником. 
+Seedot Larl теряет 6 здоровья.
+Seedot Larl теряет 2 здоровья.
+Оба покемона теряют сознание.
+Zigzagoon Collapse из команды желтых вступает в бой!
+Durant Yatoro промахивается
+
+Zigzagoon Collapse промахивается
+
+Durant Yatoro использует Bite. 
+Zigzagoon Collapse теряет 5 здоровья.
+
+Zigzagoon Collapse Использует Swagger. 
+Durant Yatoro увеличивает атаку.
+
+Durant Yatoro Издаёт Metal Sound. 
+Zigzagoon Collapse уменьшает специальную защиту.
+
+Zigzagoon Collapse Использует Swagger. 
+Durant Yatoro увеличивает атаку.
+
+Durant Yatoro растерянно попадает по себе. 
+Durant Yatoro теряет 5 здоровья.
+
+Zigzagoon Collapse борется с соперником. 
+Durant Yatoro теряет 4 здоровья.
+Zigzagoon Collapse теряет 1 здоровья.
+
+Durant Yatoro Использует Sand Attack. 
+Zigzagoon Collapse уменьшает точность.
+
+Zigzagoon Collapse Использует Swagger. 
+Durant Yatoro увеличивает атаку.
+
+Durant Yatoro растерянно попадает по себе. 
+Durant Yatoro теряет 7 здоровья.
+Durant Yatoro теряет сознание.
+Linoone Старый Бог из команды синих вступает в бой!
+Linoone Старый Бог промахивается
+
+Zigzagoon Collapse Использует Swagger. 
+Linoone Старый Бог увеличивает атаку.
+
+Linoone Старый Бог растерянно попадает по себе. 
+Linoone Старый Бог теряет 3 здоровья.
+
+Zigzagoon Collapse промахивается
+
+Linoone Старый Бог промахивается
+
+Zigzagoon Collapse борется с соперником. 
+Linoone Старый Бог теряет 3 здоровья.
+Zigzagoon Collapse теряет 1 здоровья.
+
+Linoone Старый Бог промахивается
+
+Zigzagoon Collapse промахивается
+
+Linoone Старый Бог Использует Slash. 
+Zigzagoon Collapse теряет 9 здоровья.
+Zigzagoon Collapse теряет сознание.
+Shiftry Rue из команды желтых вступает в бой!
+Linoone Старый Бог растерянно попадает по себе. 
+Linoone Старый Бог теряет 5 здоровья.
+
+Shiftry Rue Использует Swagger. 
+Linoone Старый Бог увеличивает атаку.
+
+Linoone Старый Бог промахивается
+
+Shiftry Rue использует Low Sweep. 
+Linoone Старый Бог теряет 10 здоровья.
+Linoone Старый Бог уменьшает скорость.
+Linoone Старый Бог теряет сознание.
+Nuzleaf Miposhka из команды синих вступает в бой!
+Shiftry Rue промахивается
+
+Nuzleaf Miposhka промахивается
+
+Shiftry Rue использует Low Sweep. 
+Nuzleaf Miposhka теряет 11 здоровья.
+Nuzleaf Miposhka уменьшает скорость.
+
+Nuzleaf Miposhka промахивается
+
+Nuzleaf Miposhka Использует Swagger. 
+Shiftry Rue увеличивает атаку.
+
+Shiftry Rue промахивается
+
+Nuzleaf Miposhka Использует Swagger. 
+Shiftry Rue увеличивает атаку.
+
+Shiftry Rue растерянно попадает по себе. 
+Shiftry Rue теряет 6 здоровья.
+
+Nuzleaf Miposhka промахивается
+
+Shiftry Rue растерянно попадает по себе. 
+Shiftry Rue теряет 6 здоровья.
+
+Nuzleaf Miposhka промахивается
+
+Shiftry Rue растерянно попадает по себе. 
+Shiftry Rue теряет 5 здоровья.
+Shiftry Rue теряет сознание.
+В команде желтых не осталось покемонов.
+Команда синих побеждает в этом бою!
