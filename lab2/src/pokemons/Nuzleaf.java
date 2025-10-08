@@ -6,7 +6,7 @@ import abilities.Swagger;
 import ru.ifmo.se.pokemon.Pokemon;
 import ru.ifmo.se.pokemon.Type;
 
-public class Nuzleaf extends Pokemon {
+public class Nuzleaf extends Seedot {
 
     public Nuzleaf(String name, int level) {
         super(

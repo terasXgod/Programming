@@ -7,7 +7,7 @@ import abilities.WorkUp;
 import ru.ifmo.se.pokemon.Pokemon;
 import ru.ifmo.se.pokemon.Type;
 
-public class Linoone extends Pokemon {
+public class Linoone extends Zigzagoon {
 
     public Linoone(String name, int level) {
         super(

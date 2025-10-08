@@ -7,7 +7,7 @@ import abilities.Swagger;
 import ru.ifmo.se.pokemon.Pokemon;
 import ru.ifmo.se.pokemon.Type;
 
-public class Shiftry extends Pokemon {
+public class Shiftry extends Nuzleaf {
 
     public Shiftry(String name, int level) {
         super(
