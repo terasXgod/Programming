@@ -33,7 +33,7 @@ public class Main {
             noble2.blowing(ruler1);
             noble2.blowing(ruler2);
         } else {
-            System.out.println("Мы не можем поехать, анлак(((");
+            System.err.println("Мы не можем поехать, анлак(((");
             System.out.println("История окончена(((");
         }
     }
