@@ -7,7 +7,7 @@ import abilities.SandAttack;
 import ru.ifmo.se.pokemon.Pokemon;
 import ru.ifmo.se.pokemon.Type;
 
-public class Durant extends Pokemon {
+final public class Durant extends Pokemon {
 
     public Durant(String name, int level) {
         super(

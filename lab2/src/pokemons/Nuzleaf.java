@@ -13,10 +13,7 @@ public class Nuzleaf extends Seedot {
                 name, level
         );
         super.setStats(70., 70., 40., 60., 40., 60.);
-        super.setType(Type.GRASS);
-        super.setType(Type.DARK);
-        super.addMove(new Swagger());
-        super.addMove(new Confide());
+        super.addType(Type.DARK);
         super.addMove(new Growth());
     }
 }

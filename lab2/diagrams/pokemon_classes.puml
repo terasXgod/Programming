@@ -1,0 +1,109 @@
+@startuml
+'' Compact Pokémon class diagram
+'' Layout: two-column horizontal compact view.
+'' Left column — core Move hierarchy from ru.ifmo.se.pokemon.
+'' Right column — local Pokemon classes with inline move lists.
+
+left to right direction
+skinparam linetype ortho
+skinparam packagePadding 10
+skinparam shadowing false
+skinparam dpi 160
+skinparam nodesep 60
+skinparam ranksep 100
+skinparam class {
+	BackgroundColor #FFFFFF
+	BorderColor #4B6EAF
+	FontSize 13
+}
+
+' Color accents for packages
+skinparam package {
+	BackgroundColor<<ru>> #F2F8FF
+	BorderColor<<ru>> #2F4F8F
+	BackgroundColor<<pokemons>> #FFF9F0
+	BorderColor<<pokemons>> #B34D4D
+	BackgroundColor<<abilities>> #F7FFF2
+	BorderColor<<abilities>> #3E8E3E
+}
+
+' Muted arrow color
+skinparam ArrowColor #6B6B6B
+
+' --- ru.ifmo.se.pokemon (core library) ---
+package "ru.ifmo.se.pokemon" as ru <<Rectangle>> {
+		class Pokemon #F2F8FF
+		class Move #F2F8FF
+		class DamageMove #F2F8FF
+		class PhysicalMove #F2F8FF
+		class SpecialMove #F2F8FF
+		class StatusMove #F2F8FF
+	Move <|-- DamageMove
+	DamageMove <|-- PhysicalMove
+	DamageMove <|-- SpecialMove
+	Move <|-- StatusMove
+}
+
+' Small abilities subset (visual hints)
+package abilities <<Rectangle>> {
+		class Slash #F7FFF2
+		class Swagger #F7FFF2
+		class WorkUp #F7FFF2
+		class Growth #F7FFF2
+		class Confide #F7FFF2
+		class SandAttack #F7FFF2
+		class MetalSound #F7FFF2
+		class IronDefence #F7FFF2
+		class Bite #F7FFF2
+	ru.PhysicalMove <|-- Slash
+	ru.StatusMove <|-- Swagger
+	ru.StatusMove <|-- WorkUp
+	ru.StatusMove <|-- Growth
+	ru.StatusMove <|-- Confide
+	ru.StatusMove <|-- SandAttack
+	ru.StatusMove <|-- MetalSound
+	ru.StatusMove <|-- IronDefence
+	ru.PhysicalMove <|-- Bite
+}
+
+' --- Local Pokemons (compact) ---
+package pokemons <<Rectangle>> {
+		class Zigzagoon #FFF9F0 {
+		+Type: NORMAL
+		moves: BellyDrum, Swagger, WorkUp
+	}
+		class Linoone #FFF9F0 {
+		+Type: NORMAL
+		moves: BellyDrum, Swagger, WorkUp, Slash
+	}
+		class Seedot #FFF9F0 {
+		+Type: GRASS
+		moves: Swagger, Confide
+	}
+		class Nuzleaf #FFF9F0 {
+		+Type: GRASS/DARK
+		moves: Swagger, Confide, Growth
+	}
+		class Shiftry #FFF9F0 {
+		+Type: GRASS/DARK
+		moves: Swagger, Confide, Growth, LowSweep
+	}
+		class Durant #FFF9F0 {
+		+Type: BUG/STEEL
+		moves: Bite, MetalSound, SandAttack, IronDefence
+	}
+}
+
+' --- Local inheritance preserved ---
+ru.Pokemon <|-- Zigzagoon
+Zigzagoon <|-- Linoone
+ru.Pokemon <|-- Seedot
+Seedot <|-- Nuzleaf
+Nuzleaf <|-- Shiftry
+ru.Pokemon <|-- Durant
+
+' Minimize clutter: hidden helper between columns
+Slash -[hidden]- ru.Move
+
+@enduml
+

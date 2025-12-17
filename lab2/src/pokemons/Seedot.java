@@ -12,7 +12,7 @@ public class Seedot extends Pokemon {
                 name, level
         );
         super.setStats(58., 109., 112., 48., 48., 109.);
-        super.setType(Type.GRASS);
+        super.addType(Type.GRASS);
         super.addMove(new Swagger());
         super.addMove(new Confide());
     }
