@@ -136,7 +136,7 @@ public class Car {
             }
             try {
                 Thread.sleep(700);
-            } catch (InterruptedException _) {}
+            } catch (InterruptedException e) {}
         }
         return true;
     }
