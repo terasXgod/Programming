@@ -4,7 +4,7 @@ plugins {
 }
 
 application {
-    mainClass = 'Main'   // ← укажите ваш главный класс
+    mainClass = 'server.ServerMain'   // ← укажите ваш главный класс
 }
 
 group = 'org.example'
@@ -19,7 +19,6 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
     implementation 'io.github.cdimascio:dotenv-java:3.0.0'
-    implementation 'com.opencsv:opencsv:5.7.1'
 }
 
 test {
@@ -28,4 +27,23 @@ test {
 
 tasks.named('run') {
     standardInput = System.in
+}
+
+
+tasks.register('runServer', JavaExec) {
+    group = 'application'
+    description = 'Run the server'
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = 'server.ServerMain'
+    args = ['5555']
+    standardInput = System.in
+}
+
+tasks.register('runClient', JavaExec) {
+    group = 'application'
+    description = 'Run the client'
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = 'client.ClientMain'
+    args = ['localhost', '5555']
+    standardInput = System.in  // ← ВАЖНО! Без этого Scanner не работает
 }
