@@ -1,3 +1,0 @@
-id,name,x,y,creationDate,enginePower,numberOfWheels,fuelConsumption,type
-2,zhopa,21,123,2026-03-09T02:29:24.859084500,32.0,12,12.0,PLANE
-3,privet,2,2,2026-03-11T19:02:53.190865900,123.0,2,25.0,MOTORCYCLE

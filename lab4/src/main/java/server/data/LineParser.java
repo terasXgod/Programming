@@ -1,8 +1,8 @@
 package server.data;
 
-import common.model.Coordinates;
-import common.model.Vehicle;
-import common.model.VehicleType;
+import common.entity.Coordinates;
+import common.entity.Vehicle;
+import common.entity.VehicleType;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -11,6 +11,14 @@ import java.time.format.DateTimeFormatter;
  * Parses a CSV-formatted line into a {@link Vehicle} instance.
  */
 public class LineParser {
+    /**
+     * Parses a CSV line into a Vehicle assigning fallback values and using the provided index as default id.
+     *
+     * @param line raw CSV line
+     * @param idx fallback id when missing
+     * @return parsed Vehicle instance
+     * @throws RuntimeException when parsing fails
+     */
     public static Vehicle parse(String line, Integer idx) throws RuntimeException {
         try {
             String[] parts = line.split(",", -1);
@@ -55,6 +63,12 @@ public class LineParser {
         }
     }
 
+    /**
+     * Parses a CSV line into a Vehicle without substituting a default id.
+     *
+     * @param line raw CSV line
+     * @return parsed Vehicle instance
+     */
     public static Vehicle parse(String line) {
         try {
             String[] parts = line.split(",", -1);

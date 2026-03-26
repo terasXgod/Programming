@@ -1,67 +1,80 @@
 package server;
 
-import common.Request;
-import common.Response;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import server.collection.CollectionManager;
 import server.data.DataLoader;
+import server.history.HistoryService;
 
-import java.io.*;
+import java.io.IOException;
+import java.net.InetSocketAddress;
 import java.net.ServerSocket;
-import java.net.Socket;
+import java.nio.channels.SelectionKey;
+import java.nio.channels.Selector;
+import java.nio.channels.ServerSocketChannel;
+import java.nio.channels.SocketChannel;
+import java.util.Iterator;
+import java.util.Set;
 
+/**
+ * Entry point coordinator that loads data, wires services, and listens for client connections.
+ */
 public class ServerApp {
     private final int port;
     private final CollectionManager collectionManager;
     private final RequestHandler requestHandler;
+    private final HistoryService historyService;
+    private final String filePath;
+    private final Logger logger = Logger.getLogger(ServerApp.class.getName());
+    private final EventHandler eventHandler;
 
+    /**
+     * Constructs the server with port and backing file for persistence.
+     *
+     * @param port     listening TCP port
+     * @param filePath path to the CSV data file
+     */
     public ServerApp(int port, String filePath) {
         this.port = port;
-        this.collectionManager = new CollectionManager(DataLoader.loadVehicles(filePath));
-        this.requestHandler = new RequestHandler(collectionManager, filePath);
+        this.filePath = filePath;
+        this.collectionManager = new CollectionManager(DataLoader.loadVehicles());
+        this.historyService = new HistoryService();
+        this.requestHandler = new RequestHandler(collectionManager, historyService);
+        this.eventHandler = new EventHandler(requestHandler);
     }
 
     public void run() {
-        System.out.println("Server is running on port " + port);
-        try (ServerSocket serverSocket = new ServerSocket(port)) {
+        try (
+                Selector selector = Selector.open();
+                ServerSocketChannel serverChannel = ServerSocketChannel.open();
+        ){
+            serverChannel.bind(new InetSocketAddress(port));
+            serverChannel.configureBlocking(false);
+
+            serverChannel.register(selector, SelectionKey.OP_ACCEPT);
+            logger.log(Level.INFO, String.format("Listening on port %d", port));
+
             while (true) {
-                System.out.println("Waiting for a client to connect...");
+                if (selector.select() == 0) continue;
 
-                try (Socket client = serverSocket.accept();
-                     ObjectOutputStream out = new ObjectOutputStream(client.getOutputStream());
-                     ObjectInputStream in = new ObjectInputStream(client.getInputStream())) {
+                Iterator<SelectionKey> keyIterator = selector.selectedKeys().iterator();
 
-                    System.out.println("Client connected: " + client.getInetAddress());
-                    out.flush();
+                while (keyIterator.hasNext()) {
+                    SelectionKey key = keyIterator.next();
+                    keyIterator.remove();
 
-                    while (true) {
-                        try {
-                            Request request = (Request) in.readObject();
-                            System.out.println("Received request: " + request.getCommand());
+                    if (!key.isValid()) continue;
 
-                            Response response = requestHandler.handle(request);
-                            out.writeObject(response);
-                            out.flush();
-
-                            if ("exit".equals(request.getCommand())) {
-                                System.out.println("Client requested exit.");
-                                break;
-                            }
-
-                        } catch (EOFException e) {
-                            System.out.println("Client disconnected.");
-                            break;
-                        } catch (ClassNotFoundException e) {
-                            System.err.println("[ERROR] Invalid object received: " + e.getMessage());
-                            out.writeObject(new Response("Invalid request format.", false));
-                            out.flush();
-                        }
+                    if (key.isAcceptable()) {
+                        eventHandler.handleAccept(key);
+                    } else if (key.isReadable()) {
+                        eventHandler.handleRead(key);
                     }
-                } catch (IOException e) {
-                    System.err.println("[ERROR] Client connection error: " + e.getMessage());
                 }
             }
+
         } catch (IOException e) {
-            System.err.println("[FATAL] Server failed to start: " + e.getMessage());
+            logger.log(Level.SEVERE, e.getMessage());
         }
     }
 

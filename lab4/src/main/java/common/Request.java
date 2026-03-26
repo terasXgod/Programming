@@ -1,61 +1,102 @@
 package common;
 
-import common.model.Vehicle;
+import common.commands.Command;
+import common.dto.command.CommandPayload;
 
 import java.io.Serial;
 import java.io.Serializable;
 
+/**
+ * Transport object that wraps a command instance with its optional payload
+ * for transmission between client and server.
+ */
 public class Request implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
 
-    private String command;
-    private String arg;
-    private Vehicle vehicle;
+    private final Command command;
+    private final CommandPayload payload;
+    private final boolean scriptRequest;
+    private final String scriptFileName;
 
-    public Request() {}
-
-    public Request(String command) {
+    /**
+     * Creates a request with the provided command and payload.
+     *
+     * @param command command to execute
+     * @param payload payload accompanying the command (may be null)
+     */
+    public Request(Command command, CommandPayload payload) {
         this.command = command;
+        this.payload = payload;
+        this.scriptRequest = false;
+        this.scriptFileName = null;
     }
 
-    public Request(String command, String arg) {
-        this.command = command;
-        this.arg = arg;
+    private Request(String scriptFileName) {
+        this.command = null;
+        this.payload = null;
+        this.scriptRequest = true;
+        this.scriptFileName = scriptFileName;
     }
 
-    public Request(String command, Vehicle vehicle) {
-        this.command = command;
-        this.vehicle = vehicle;
+    /**
+     * Creates a client-only request for the execute_script command.
+     * This request is never serialized/sent to the server.
+     *
+     * @param fileName script file to load locally
+     * @return configured script request
+     */
+    public static Request scriptRequest(String fileName) {
+        return new Request(fileName);
     }
 
-    public Request(String command, String arg, Vehicle vehicle) {
-        this.command = command;
-        this.arg = arg;
-        this.vehicle = vehicle;
+    /**
+     * Indicates whether the request is intended only for client-side script execution.
+     *
+     * @return true when the request should not be sent to the server
+     */
+    public boolean isScriptRequest() {
+        return scriptRequest;
     }
 
-    public String getCommand() {
+    /**
+     * Returns the encapsulated command.
+     *
+     * @return command instance or null for script-only requests
+     */
+    public Command getCommand() {
         return command;
     }
 
-    public String getArg() {
-        return arg;
+    /**
+     * Returns the command name if a command is present.
+     *
+     * @return command name or null
+     */
+    public String getCommandName() {
+        return command != null ? command.getName() : null;
     }
 
-    public Vehicle getVehicle() {
-        return vehicle;
+    /**
+     * Returns the payload accompanying the command.
+     *
+     * @return payload or null
+     */
+    public CommandPayload getPayload() {
+        return payload;
     }
 
-    public void setCommand(String command) {
-        this.command = command;
+    /**
+     * Returns the script file name for client-side script execution.
+     *
+     * @return script file name or null
+     */
+    public String getScriptFileName() {
+        return scriptFileName;
     }
 
-    public void setArg(String arg) {
-        this.arg = arg;
-    }
-
-    public void setVehicle(Vehicle vehicle) {
-        this.vehicle = vehicle;
+    @Override
+    public String toString() {
+        return "command: " + command.toString() + payload != null ?  "" : (" payload: " + payload.toString());
     }
 }
