@@ -1,0 +1,228 @@
+2026-03-16 21:56:10 INFO  server.ServerApp - Server is running on port 5555 
+2026-03-16 21:56:31 INFO  server.ConnectManager - Client connected: /127.0.0.1
+2026-03-16 21:56:37 INFO  server.RequestHandler - Executed command: help
+2026-03-16 21:56:42 INFO  server.RequestHandler - Executed command: show
+2026-03-16 21:56:53 INFO  server.RequestHandler - Executed command: exit
+2026-03-16 21:56:53 INFO  server.ConnectManager - Client disconnected: /127.0.0.1
+2026-03-16 21:56:53 INFO  server.ConnectManager - Collection saved: dataBase/data.csv
+2026-03-16 21:56:56 INFO  server.ConnectManager - Client connected: /127.0.0.1
+2026-03-16 21:57:08 INFO  server.RequestHandler - Executed command: history
+2026-03-16 21:57:11 INFO  server.ConnectManager - Client disconnected: /127.0.0.1
+2026-03-16 21:57:11 INFO  server.ConnectManager - Collection saved: dataBase/data.csv
+2026-03-18 17:23:20 INFO  server.ServerApp - Server is running on port 5555 
+2026-03-18 17:23:26 INFO  server.ConnectManager - Client connected: /127.0.0.1
+2026-03-18 17:23:44 INFO  server.RequestHandler - Executed command: help
+2026-03-18 17:23:48 INFO  server.RequestHandler - Executed command: show
+2026-03-18 17:24:29 INFO  server.RequestHandler - Executed command: info
+2026-03-18 17:24:42 INFO  server.RequestHandler - Executed command: show
+2026-03-18 17:25:32 INFO  server.RequestHandler - Executed command: show
+2026-03-18 17:25:35 INFO  server.RequestHandler - Executed command: help
+2026-03-18 17:25:39 INFO  server.RequestHandler - Executed command: history
+2026-03-18 17:30:27 INFO  server.RequestHandler - Executed command: info
+2026-03-18 17:30:27 INFO  server.RequestHandler - Executed command: show
+2026-03-18 17:30:27 INFO  server.RequestHandler - Executed command: info
+2026-03-18 17:30:43 INFO  server.RequestHandler - Executed command: history
+2026-03-18 17:30:57 INFO  server.RequestHandler - Executed command: info
+2026-03-18 17:30:57 INFO  server.RequestHandler - Executed command: show
+2026-03-18 17:30:57 INFO  server.RequestHandler - Executed command: info
+2026-03-18 17:30:57 INFO  server.RequestHandler - Executed command: history
+2026-03-18 17:31:28 INFO  server.RequestHandler - Executed command: info
+2026-03-18 17:31:28 INFO  server.RequestHandler - Executed command: show
+2026-03-18 17:31:28 INFO  server.RequestHandler - Executed command: info
+2026-03-18 17:31:28 INFO  server.RequestHandler - Executed command: history
+2026-03-18 17:32:19 INFO  server.RequestHandler - Executed command: add
+2026-03-18 17:45:01 INFO  server.RequestHandler - Executed command: exit
+2026-03-18 17:45:01 INFO  server.ConnectManager - Client disconnected: /127.0.0.1
+2026-03-18 17:45:01 INFO  server.ConnectManager - Collection saved: dataBase/data.csv
+2026-03-18 17:45:12 INFO  server.ServerApp - Server is running on port 5555 
+2026-03-18 17:45:17 INFO  server.ConnectManager - Client connected: /127.0.0.1
+2026-03-18 17:45:27 INFO  server.RequestHandler - Received command with args: [!!!common.CustomArgument@d554c5f=>java.lang.NullPointerException:Cannot invoke "java.lang.Integer.toString()" because "this.id" is null!!!]
+2026-03-18 17:45:27 INFO  server.RequestHandler - Executed command: help
+2026-03-18 17:48:24 INFO  server.ServerApp - Server is running on port 5555 
+2026-03-18 17:48:30 INFO  server.ConnectManager - Client connected: /127.0.0.1
+2026-03-18 17:50:42 INFO  server.ConnectManager - Client disconnected: /127.0.0.1
+2026-03-18 17:50:42 INFO  server.ConnectManager - Collection saved: dataBase/data.csv
+2026-03-18 17:51:15 INFO  server.ServerApp - Server is running on port 5555 
+2026-03-18 17:51:29 INFO  server.ConnectManager - Client connected: /127.0.0.1
+2026-03-18 17:51:39 INFO  server.RequestHandler - get command with: [!!!common.CustomArgument@d554c5f=>java.lang.NullPointerException:Cannot invoke "java.lang.Integer.toString()" because "this.id" is null!!!]
+2026-03-18 17:51:39 INFO  server.RequestHandler - Received command with args: [!!!common.CustomArgument@d554c5f=>java.lang.NullPointerException:Cannot invoke "java.lang.Integer.toString()" because "this.id" is null!!!]
+2026-03-18 17:51:39 ERROR server.RequestHandler - Error: no ID provided.
+2026-03-18 17:57:22 INFO  server.ConnectManager - Client disconnected: /127.0.0.1
+2026-03-18 17:57:22 INFO  server.ConnectManager - Collection saved: dataBase/data.csv
+2026-03-18 17:57:32 INFO  server.ServerApp - Server is running on port 5555 
+2026-03-18 17:57:36 INFO  server.ConnectManager - Client connected: /127.0.0.1
+2026-03-18 17:57:43 INFO  server.RequestHandler - get command with: vehicledto: len` pisat`id: nullfilename: nullfuelComp: 123.0
+2026-03-18 17:57:43 INFO  server.RequestHandler - Received command with args: vehicledto: len` pisat`id: nullfilename: nullfuelComp: 123.0
+2026-03-18 17:57:43 ERROR server.RequestHandler - Error: no ID provided.
+2026-03-18 17:59:00 INFO  server.ServerApp - Server is running on port 5555 
+2026-03-18 17:59:05 INFO  server.ConnectManager - Client connected: /127.0.0.1
+2026-03-18 17:59:13 INFO  server.RequestHandler - get command with: vehicledto: len` pisat`id: 123filename: nullfuelComp: -1.0
+2026-03-18 17:59:13 INFO  server.RequestHandler - Received command with args: vehicledto: len` pisat`id: 123filename: nullfuelComp: -1.0
+2026-03-18 17:59:13 INFO  server.RequestHandler - Executed command: remove_by_id
+2026-03-18 18:20:35 INFO  server.ServerApp - Server is running on port 5555 
+2026-03-18 18:20:47 INFO  server.ConnectManager - Client connected: /127.0.0.1
+2026-03-18 18:20:54 INFO  server.RequestHandler - Received command: common.commands.HelpCommand@d554c5f
+2026-03-18 18:20:54 INFO  server.RequestHandler - Executed command: help
+2026-03-18 18:20:56 INFO  server.RequestHandler - Received command: common.commands.ShowCommand@dc7df28
+2026-03-18 18:20:56 INFO  server.RequestHandler - Executed command: show
+2026-03-18 18:21:04 INFO  server.RequestHandler - Received command: common.commands.RemoveByIdCommand@29d80d2b
+2026-03-18 18:21:04 INFO  server.RequestHandler - Executed command: remove_by_id
+2026-03-18 18:21:07 INFO  server.RequestHandler - Received command: common.commands.ShowCommand@47caedad
+2026-03-18 18:21:07 INFO  server.RequestHandler - Executed command: show
+2026-03-18 18:21:32 INFO  server.ConnectManager - Client disconnected: /127.0.0.1
+2026-03-18 18:21:32 INFO  server.ConnectManager - Collection saved: dataBase/data.csv
+2026-03-18 18:22:04 INFO  server.ServerApp - Server is running on port 5555 
+2026-03-18 18:22:21 INFO  server.ConnectManager - Client connected: /127.0.0.1
+2026-03-18 18:22:26 INFO  server.RequestHandler - Received command: common.commands.HelpCommand@68c9d179
+2026-03-18 18:22:26 INFO  server.RequestHandler - Executed command: help
+2026-03-18 18:22:27 INFO  server.RequestHandler - Received command: common.commands.ShowCommand@55de24cc
+2026-03-18 18:22:27 INFO  server.RequestHandler - Executed command: show
+2026-03-18 18:22:30 INFO  server.RequestHandler - Received command: common.commands.InfoCommand@5db6b9cd
+2026-03-18 18:22:30 INFO  server.RequestHandler - Executed command: info
+2026-03-18 18:22:34 INFO  server.RequestHandler - Received command: common.commands.SaveCommand@475c9c31
+2026-03-18 18:22:34 ERROR server.RequestHandler - Error: no file name provided.
+2026-03-18 18:22:42 INFO  server.RequestHandler - Received command: common.commands.SaveCommand@5276d6ee
+2026-03-18 18:22:42 ERROR server.RequestHandler - Error: no file name provided.
+2026-03-18 18:23:08 INFO  server.RequestHandler - Received command: common.commands.AddCommand@66ea810
+2026-03-18 18:23:08 INFO  server.RequestHandler - Executed command: add
+2026-03-18 18:23:15 INFO  server.RequestHandler - Received command: common.commands.ShowCommand@1b66c0fb
+2026-03-18 18:23:15 INFO  server.RequestHandler - Executed command: show
+2026-03-18 18:23:20 INFO  server.RequestHandler - Received command: common.commands.SaveCommand@7dc19a70
+2026-03-18 18:23:20 ERROR server.RequestHandler - Error: no file name provided.
+2026-03-18 18:23:22 INFO  server.RequestHandler - Received command: common.commands.ExitCommand@1df8da7a
+2026-03-18 18:23:22 INFO  server.RequestHandler - Executed command: exit
+2026-03-18 18:23:22 INFO  server.ConnectManager - Client disconnected: /127.0.0.1
+2026-03-18 18:23:22 INFO  server.ConnectManager - Collection saved: dataBase/data.csv
+2026-03-18 18:23:29 INFO  server.ConnectManager - Client connected: /127.0.0.1
+2026-03-18 18:23:32 INFO  server.RequestHandler - Received command: common.commands.ShowCommand@13526e59
+2026-03-18 18:23:32 INFO  server.RequestHandler - Executed command: show
+2026-03-18 18:26:44 INFO  server.ConnectManager - Client disconnected: /127.0.0.1
+2026-03-18 18:26:44 INFO  server.ConnectManager - Collection saved: dataBase/data.csv
+2026-03-18 18:29:09 INFO  server.ServerApp - Server is running on port 5555 
+2026-03-18 18:29:32 INFO  server.ConnectManager - Client connected: /127.0.0.1
+2026-03-18 18:29:35 INFO  server.RequestHandler - Received command: common.commands.SaveCommand@d554c5f
+2026-03-18 18:29:35 INFO  server.RequestHandler - Executed command: save
+2026-03-18 18:29:53 INFO  server.RequestHandler - Received command: common.commands.ShowCommand@782859e
+2026-03-18 18:29:53 INFO  server.RequestHandler - Executed command: show
+2026-03-18 18:30:03 INFO  server.RequestHandler - Received command: common.commands.RemoveByIdCommand@5c86a017
+2026-03-18 18:30:03 INFO  server.RequestHandler - Executed command: remove_by_id
+2026-03-18 18:30:05 INFO  server.RequestHandler - Received command: common.commands.ShowCommand@7fb4f2a9
+2026-03-18 18:30:05 INFO  server.RequestHandler - Executed command: show
+2026-03-18 18:30:10 INFO  server.ConnectManager - Client disconnected: /127.0.0.1
+2026-03-18 18:30:39 INFO  server.ServerApp - Server is running on port 5555 
+2026-03-18 18:31:01 INFO  server.ConnectManager - Client connected: /127.0.0.1
+2026-03-18 18:31:43 INFO  server.RequestHandler - Received command: common.commands.ShowCommand@d554c5f
+2026-03-18 18:31:43 INFO  server.RequestHandler - Executed command: show
+2026-03-18 18:31:55 INFO  server.RequestHandler - Received command: common.commands.RemoveByIdCommand@5db6b9cd
+2026-03-18 18:31:55 INFO  server.RequestHandler - Executed command: remove_by_id
+2026-03-18 18:31:58 INFO  server.RequestHandler - Received command: common.commands.ShowCommand@29d80d2b
+2026-03-18 18:31:58 INFO  server.RequestHandler - Executed command: show
+2026-03-18 18:32:00 INFO  server.RequestHandler - Received command: common.commands.SaveCommand@47caedad
+2026-03-18 18:32:00 INFO  server.RequestHandler - Executed command: save
+2026-03-18 18:32:02 INFO  server.ConnectManager - Client disconnected: /127.0.0.1
+2026-03-18 18:32:12 INFO  server.ConnectManager - Client connected: /127.0.0.1
+2026-03-18 18:32:14 INFO  server.RequestHandler - Received command: common.commands.ShowCommand@1b66c0fb
+2026-03-18 18:32:14 INFO  server.RequestHandler - Executed command: show
+2026-03-18 18:32:16 INFO  server.RequestHandler - Received command: common.commands.ShowCommand@7dc19a70
+2026-03-18 18:32:16 INFO  server.RequestHandler - Executed command: show
+2026-03-18 18:32:32 INFO  server.ServerApp - Server is running on port 5555 
+2026-03-18 18:32:44 INFO  server.ConnectManager - Client connected: /127.0.0.1
+2026-03-18 18:32:50 INFO  server.RequestHandler - Received command: common.commands.ShowCommand@d554c5f
+2026-03-18 18:32:50 INFO  server.RequestHandler - Executed command: show
+2026-03-18 18:33:08 INFO  server.RequestHandler - Received command: common.commands.RemoveByIdCommand@5db6b9cd
+2026-03-18 18:33:08 INFO  server.RequestHandler - Executed command: remove_by_id
+2026-03-18 18:33:09 INFO  server.RequestHandler - Received command: common.commands.SaveCommand@4f0f2942
+2026-03-18 18:33:09 INFO  server.RequestHandler - Executed command: save
+2026-03-18 18:33:10 INFO  server.RequestHandler - Received command: common.commands.ShowCommand@7fb4f2a9
+2026-03-18 18:33:10 INFO  server.RequestHandler - Executed command: show
+2026-03-18 18:33:27 INFO  server.ServerApp - Server is running on port 5555 
+2026-03-18 18:33:38 INFO  server.ConnectManager - Client connected: /127.0.0.1
+2026-03-18 18:33:41 INFO  server.RequestHandler - Received command: common.commands.ShowCommand@d554c5f
+2026-03-18 18:33:41 INFO  server.RequestHandler - Executed command: show
+2026-03-18 18:34:28 INFO  server.RequestHandler - Received command: common.commands.SaveCommand@23f5b5dc
+2026-03-18 18:34:28 INFO  server.RequestHandler - Executed command: save
+2026-03-18 18:35:34 INFO  server.RequestHandler - Received command: common.commands.RemoveByIdCommand@5c86a017
+2026-03-18 18:35:34 INFO  server.RequestHandler - Executed command: remove_by_id
+2026-03-18 18:35:37 INFO  server.RequestHandler - Received command: common.commands.RemoveByIdCommand@1b919693
+2026-03-18 18:35:37 INFO  server.RequestHandler - Executed command: remove_by_id
+2026-03-18 18:35:39 INFO  server.RequestHandler - Received command: common.commands.SaveCommand@7dfd3c81
+2026-03-18 18:35:39 INFO  server.RequestHandler - Executed command: save
+2026-03-18 18:36:00 INFO  server.RequestHandler - Received command: common.commands.AddCommand@5dafbe45
+2026-03-18 18:36:00 INFO  server.RequestHandler - Executed command: add
+2026-03-18 18:36:08 INFO  server.RequestHandler - Received command: common.commands.SaveCommand@24c1b2d2
+2026-03-18 18:36:08 INFO  server.RequestHandler - Executed command: save
+2026-03-18 18:38:00 INFO  server.ServerApp - Server is running on port 5555 
+2026-03-18 18:38:12 INFO  server.ConnectManager - Client connected: /127.0.0.1
+2026-03-18 18:38:19 INFO  server.RequestHandler - Received command: common.commands.ShowCommand@d554c5f
+2026-03-18 18:38:19 INFO  server.RequestHandler - Executed command: show
+2026-03-18 18:38:25 INFO  server.RequestHandler - Received command: common.commands.RemoveByIdCommand@5db6b9cd
+2026-03-18 18:38:25 INFO  server.RequestHandler - Executed command: remove_by_id
+2026-03-18 18:38:26 INFO  server.RequestHandler - Received command: common.commands.ShowCommand@29d80d2b
+2026-03-18 18:38:26 INFO  server.RequestHandler - Executed command: show
+2026-03-18 18:38:27 INFO  server.RequestHandler - Received command: common.commands.SaveCommand@47caedad
+2026-03-18 18:38:27 INFO  server.RequestHandler - Executed command: save
+2026-03-18 18:38:32 INFO  server.ConnectManager - Client disconnected: /127.0.0.1
+2026-03-18 18:38:39 INFO  server.ServerApp - Server is running on port 5555 
+2026-03-18 18:38:49 INFO  server.ConnectManager - Client connected: /127.0.0.1
+2026-03-18 18:38:51 INFO  server.RequestHandler - Received command: common.commands.ShowCommand@68c9d179
+2026-03-18 18:38:51 INFO  server.RequestHandler - Executed command: show
+2026-03-18 19:10:36 INFO  server.ConnectManager - Client disconnected: /127.0.0.1
+2026-03-18 19:11:59 INFO  server.ServerApp - Server is running on port 5555 
+2026-03-18 19:12:16 INFO  server.ConnectManager - Client connected: /127.0.0.1
+2026-03-18 19:12:47 INFO  server.RequestHandler - Received command: common.commands.ShowCommand@68c9d179
+2026-03-18 19:12:47 INFO  server.RequestHandler - Executed command: show
+2026-03-18 19:12:50 INFO  server.RequestHandler - Received command: common.commands.HelpCommand@782859e
+2026-03-18 19:12:50 INFO  server.RequestHandler - Executed command: help
+2026-03-18 19:12:57 INFO  server.RequestHandler - Received command: common.commands.InfoCommand@5db6b9cd
+2026-03-18 19:12:57 INFO  server.RequestHandler - Executed command: info
+2026-03-18 19:13:02 INFO  server.RequestHandler - Received command: common.commands.HistoryCommand@475c9c31
+2026-03-18 19:13:02 INFO  server.RequestHandler - Executed command: history
+2026-03-18 19:13:16 INFO  server.RequestHandler - Received command: common.commands.AddCommand@46d59067
+2026-03-18 19:13:16 INFO  server.RequestHandler - Executed command: add
+2026-03-18 19:13:21 INFO  server.RequestHandler - Received command: common.commands.ShowCommand@5a7fe64f
+2026-03-18 19:13:21 INFO  server.RequestHandler - Executed command: show
+2026-03-18 19:14:30 INFO  server.ServerApp - Server is running on port 5555 
+2026-03-18 19:15:37 INFO  server.ConnectManager - Client connected: /127.0.0.1
+2026-03-18 19:15:45 INFO  server.RequestHandler - Received command: common.commands.ShowCommand@68c9d179
+2026-03-18 19:15:45 INFO  server.RequestHandler - Executed command: show
+2026-03-18 19:15:53 INFO  server.RequestHandler - Received command: common.commands.RemoveByIdCommand@6f43c82
+2026-03-18 19:15:53 INFO  server.RequestHandler - Executed command: remove_by_id
+2026-03-18 19:15:55 INFO  server.RequestHandler - Received command: common.commands.ExitCommand@446a1e84
+2026-03-18 19:15:55 INFO  server.RequestHandler - Executed command: exit
+2026-03-18 19:15:55 INFO  server.ConnectManager - Client disconnected: /127.0.0.1
+2026-03-18 19:15:55 INFO  server.ConnectManager - Collection saved: dataBase/data.csv
+2026-03-18 19:16:04 INFO  server.ServerApp - Server is running on port 5555 
+2026-03-18 19:16:06 INFO  server.ConnectManager - Client connected: /127.0.0.1
+2026-03-18 19:16:09 INFO  server.RequestHandler - Received command: common.commands.ShowCommand@5e7cd6cc
+2026-03-18 19:16:09 INFO  server.RequestHandler - Executed command: show
+2026-03-18 19:16:12 INFO  server.RequestHandler - Received command: common.commands.InfoCommand@3932c79a
+2026-03-18 19:16:12 INFO  server.RequestHandler - Executed command: info
+2026-03-18 19:16:31 INFO  server.RequestHandler - Received command: common.commands.ExitCommand@69504ae9
+2026-03-18 19:16:31 INFO  server.RequestHandler - Executed command: exit
+2026-03-18 19:16:31 INFO  server.ConnectManager - Client disconnected: /127.0.0.1
+2026-03-18 19:16:31 INFO  server.ConnectManager - Collection saved: dataBase/data.csv
+2026-03-18 19:16:35 INFO  server.ConnectManager - Client connected: /127.0.0.1
+2026-03-18 19:16:38 INFO  server.RequestHandler - Received command: common.commands.ShowCommand@41330d4f
+2026-03-18 19:16:38 INFO  server.RequestHandler - Executed command: show
+2026-03-18 19:20:13 INFO  server.ServerApp - Server is running on port 5555 
+2026-03-18 19:20:38 INFO  server.ConnectManager - Client connected: /127.0.0.1
+2026-03-20 01:06:17 INFO  server.ServerApp - Listening on port 5555...
+2026-03-20 01:39:37 INFO  server.ServerApp - Listening on port 5555...
+2026-03-20 01:54:30 INFO  server.ServerApp - Listening on port 5555...
+2026-03-20 01:57:44 INFO  server.ServerApp - Listening on port 5555...
+2026-03-20 01:59:10 INFO  server.ServerApp - Listening on port 5555...
+2026-03-20 01:59:16 INFO  server.RequestHandler - Received command: help
+2026-03-20 01:59:16 INFO  server.RequestHandler - Executed command: help
+2026-03-20 01:59:30 INFO  server.RequestHandler - Received command: history
+2026-03-20 01:59:30 INFO  server.RequestHandler - Executed command: history
+2026-03-20 02:01:07 INFO  server.RequestHandler - Received command: help
+2026-03-20 02:01:07 INFO  server.RequestHandler - Executed command: help
+2026-03-20 02:01:10 INFO  server.RequestHandler - Received command: help
+2026-03-20 02:01:10 INFO  server.RequestHandler - Executed command: help
+2026-03-20 02:04:06 INFO  server.ServerApp - Listening on port 5555...
+2026-03-20 02:04:26 INFO  server.RequestHandler - Received command: help
+2026-03-20 02:04:26 INFO  server.RequestHandler - Executed command: help
+2026-03-20 02:04:29 INFO  server.RequestHandler - Received command: help
+2026-03-20 02:04:29 INFO  server.RequestHandler - Executed command: help
+2026-03-20 02:04:43 INFO  server.RequestHandler - Received command: help
+2026-03-20 02:04:43 INFO  server.RequestHandler - Executed command: help
