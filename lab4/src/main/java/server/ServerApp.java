@@ -2,19 +2,18 @@ package server;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
+import repository.DataManager;
 import server.collection.CollectionManager;
-import server.data.DataLoader;
+import repository.csv.CsvManager;
 import server.history.HistoryService;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
-import java.net.ServerSocket;
 import java.nio.channels.SelectionKey;
 import java.nio.channels.Selector;
 import java.nio.channels.ServerSocketChannel;
-import java.nio.channels.SocketChannel;
 import java.util.Iterator;
-import java.util.Set;
 
 /**
  * Entry point coordinator that loads data, wires services, and listens for client connections.
@@ -24,6 +23,7 @@ public class ServerApp {
     private final CollectionManager collectionManager;
     private final RequestHandler requestHandler;
     private final HistoryService historyService;
+    private final DataManager dataManager;
     private final String filePath;
     private final Logger logger = Logger.getLogger(ServerApp.class.getName());
     private final EventHandler eventHandler;
@@ -37,7 +37,8 @@ public class ServerApp {
     public ServerApp(int port, String filePath) {
         this.port = port;
         this.filePath = filePath;
-        this.collectionManager = new CollectionManager(DataLoader.loadVehicles());
+        this.dataManager = new CsvManager();
+        this.collectionManager = new CollectionManager(dataManager.getVehicles());
         this.historyService = new HistoryService();
         this.requestHandler = new RequestHandler(collectionManager, historyService);
         this.eventHandler = new EventHandler(requestHandler);

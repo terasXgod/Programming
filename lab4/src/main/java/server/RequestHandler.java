@@ -8,8 +8,10 @@ import common.dto.command.CommandPayload;
 import common.dto.command.HistoryPayload;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
+import repository.DataManager;
 import server.collection.CollectionManager;
-import server.data.DataLoader;
+import repository.csv.CsvManager;
 import server.history.HistoryService;
 
 /**
@@ -20,6 +22,7 @@ public class RequestHandler {
     private final CollectionManager collectionManager;
     private final HistoryService historyService;
     private final Logger logger = Logger.getLogger(RequestHandler.class.getName());
+    private final DataManager dataManager = new CsvManager();
 
     /**
      * Creates a handler bound to collection and history services.
@@ -65,7 +68,7 @@ public class RequestHandler {
             }
             String result = command.execute(collectionManager);
             if ("exit".equals(command.getName())) {
-                DataLoader.saveVehicles(collectionManager.getCollection());
+                dataManager.saveVehicles(collectionManager.getCollection());
             }
             historyService.add(command.getName());
             logger.log(Level.INFO, String.format("Executed command: %s", command.getName()));

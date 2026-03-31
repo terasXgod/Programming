@@ -2,9 +2,6 @@ package common.commands;
 
 import common.dto.command.CommandPayload;
 import server.collection.CollectionManager;
-import server.data.DataLoader;
-
-import java.io.IOException;
 
 /**
  * Command to signal that the client wants to disconnect.

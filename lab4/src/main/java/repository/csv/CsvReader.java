@@ -1,4 +1,4 @@
-package server.data;
+package repository.csv;
 
 import java.io.File;
 import java.io.FileNotFoundException;

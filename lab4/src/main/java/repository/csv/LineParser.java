@@ -1,4 +1,4 @@
-package server.data;
+package repository.csv;
 
 import common.entity.Coordinates;
 import common.entity.Vehicle;
