@@ -34,9 +34,9 @@ public class ClientApp {
      */
     public void run() {
         boolean exit = false;
+        Scanner scanner = new Scanner(System.in);
         while (!exit) {
-            try (ClientSocket socket = new ClientSocket();
-                 Scanner scanner = new Scanner(System.in)) {
+            try (ClientSocket socket = new ClientSocket()) {
 
                 ConsoleReader consoleReader = new ConsoleReader(scanner);
                 socket.connect(host, port);
@@ -98,6 +98,7 @@ public class ClientApp {
                 throw new RuntimeException("Unexpected error: " + e.getMessage(), e);
             }
         }
+        scanner.close();
     }
 
     /**
