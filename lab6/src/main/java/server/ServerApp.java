@@ -45,37 +45,39 @@ public class ServerApp {
     }
 
     public void run() {
-        try (
-                Selector selector = Selector.open();
-                ServerSocketChannel serverChannel = ServerSocketChannel.open();
-        ){
-            serverChannel.bind(new InetSocketAddress(port));
-            serverChannel.configureBlocking(false);
+        while (true) {
+            try (
+                    Selector selector = Selector.open();
+                    ServerSocketChannel serverChannel = ServerSocketChannel.open();
+            ) {
+                serverChannel.bind(new InetSocketAddress(port));
+                serverChannel.configureBlocking(false);
 
-            serverChannel.register(selector, SelectionKey.OP_ACCEPT);
-            logger.log(Level.INFO, String.format("Listening on port %d", port));
+                serverChannel.register(selector, SelectionKey.OP_ACCEPT);
+                logger.log(Level.INFO, String.format("Listening on port %d", port));
 
-            while (true) {
-                if (selector.select() == 0) continue;
+                while (true) {
+                    if (selector.select() == 0) continue;
 
-                Iterator<SelectionKey> keyIterator = selector.selectedKeys().iterator();
+                    Iterator<SelectionKey> keyIterator = selector.selectedKeys().iterator();
 
-                while (keyIterator.hasNext()) {
-                    SelectionKey key = keyIterator.next();
-                    keyIterator.remove();
+                    while (keyIterator.hasNext()) {
+                        SelectionKey key = keyIterator.next();
+                        keyIterator.remove();
 
-                    if (!key.isValid()) continue;
+                        if (!key.isValid()) continue;
 
-                    if (key.isAcceptable()) {
-                        eventHandler.handleAccept(key);
-                    } else if (key.isReadable()) {
-                        eventHandler.handleRead(key);
+                        if (key.isAcceptable()) {
+                            eventHandler.handleAccept(key);
+                        } else if (key.isReadable()) {
+                            eventHandler.handleRead(key);
+                        }
                     }
                 }
-            }
 
-        } catch (IOException e) {
-            logger.log(Level.SEVERE, e.getMessage());
+            } catch (IOException e) {
+                logger.log(Level.SEVERE, e.getMessage());
+            }
         }
     }
 
